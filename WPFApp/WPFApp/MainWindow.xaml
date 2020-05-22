@@ -8,8 +8,22 @@
         mc:Ignorable="d"
         Title="MyFirstGUI" Height="450" Width="800">
     <Grid>
-        <t:FloatingActionButton FontFamily="Segoe MDL2 Assets" FontSize="50" x:Name="FloatingActionButton">
+        <t:FloatingActionButton FontFamily="Segoe MDL2 Assets" Grid.ColumnSpan="2"  FontSize="50" x:Name="FloatingActionButton" Margin="610,160,82,159">
             &#xE713;
         </t:FloatingActionButton>
+
+        <!--Button Grid.ColumnSpan="1" Margin="89,160,503,159">
+            <Button.Height>100</Button.Height>
+            <Button.Width>200</Button.Width>
+            <Button.Content>
+                <WrapPanel>
+                    <TextBlock Foreground="Blue">Multi</TextBlock>
+                    <TextBlock Foreground="Red">Color</TextBlock>
+                    <TextBlock Foreground="Green">Button</TextBlock>
+                </WrapPanel>
+            </Button.Content>
+            <Button.FontSize>20</Button.FontSize>
+            <Button.Background>LightBlue</Button.Background>
+        </-->
     </Grid>
 </Window>

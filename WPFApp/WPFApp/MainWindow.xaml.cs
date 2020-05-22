@@ -22,7 +22,36 @@ namespace WPFApp {
         public MainWindow() {
             InitializeComponent();
 
-            FloatingActionButton.Click += new RoutedEventHandler(ShowMsg);
+            Grid grid = new Grid();
+            this.Content = grid;
+
+            Button button = new Button();
+            button.Width = 200;
+            button.Height = 100;
+            button.FontSize = 20;
+
+            WrapPanel wrapPanel = new WrapPanel();
+            TextBlock textBlock = new TextBlock();
+
+            textBlock.Text = "Multi";
+            textBlock.Foreground = Brushes.Blue;
+            wrapPanel.Children.Add(textBlock);
+
+            textBlock = new TextBlock();
+            textBlock.Text = "Color";
+            textBlock.Foreground = Brushes.Red;
+            wrapPanel.Children.Add(textBlock);
+
+            textBlock = new TextBlock();
+            textBlock.Text = "Button";
+            textBlock.Foreground = Brushes.Green;
+            wrapPanel.Children.Add(textBlock);
+
+            button.Content = wrapPanel;
+            grid.Children.Add(button);
+
+
+            //FloatingActionButton.Click += new RoutedEventHandler(ShowMsg);
         }
 
         private void ShowMsg(object sender, RoutedEventArgs e) {
