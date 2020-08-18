@@ -8,9 +8,9 @@
         mc:Ignorable="d"
         Title="MyFirstGUI" Height="450" Width="800">
     <Grid>
-        <t:FloatingActionButton FontFamily="Segoe MDL2 Assets" Grid.ColumnSpan="2"  FontSize="50" x:Name="FloatingActionButton" Margin="610,160,82,159">
+        <!--<t:FloatingActionButton FontFamily="Segoe MDL2 Assets" Grid.ColumnSpan="2"  FontSize="50" x:Name="FloatingActionButton" Margin="610,160,82,159">
             &#xE713;
-        </t:FloatingActionButton>
+        </t:FloatingActionButton>-->
 
         <!--Button Grid.ColumnSpan="1" Margin="89,160,503,159">
             <Button.Height>100</Button.Height>
@@ -25,5 +25,45 @@
             <Button.FontSize>20</Button.FontSize>
             <Button.Background>LightBlue</Button.Background>
         </-->
+        <ToolBar Name="drawingToolbar" Height="50" Margin="0,0,0,369">
+            <Button Background="#FFD2D2D2" Content="Right" Height="50" Width="80" Click="RotateRight"/>
+            <Button Background="#FFD2D2D2" Content="Left" Height="50" Width="80" Click="RotateLeft"/>
+        </ToolBar>
+        <WrapPanel Margin="0,55">
+            <Border BorderThickness="1" BorderBrush="Black">
+                <!--<t:FloatingActionButton FontFamily="Segoe MDL2 Assets" FontSize="50" x:Name="FloatingActionButton" Margin="610,160,82,159">
+                    &#xE713;
+                </t:FloatingActionButton>-->
+                <ListBox>
+                    <ListBoxItem>
+                        <t:ControlItem ToolTip="WPFApp.Themes.FloatingActionButton" x:Name="FABDrag" MouseLeftButtonDown="DragStart">
+                            <t:FloatingActionButton IsHitTestVisible="false" FontFamily="Segoe MDL2 Assets" FontSize="50" x:Name="FloatingActionButton">
+                                &#xE713;
+                            </t:FloatingActionButton>
+                        </t:ControlItem>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <t:ControlItem MouseLeftButtonDown="DragStart" ToolTip="System.Windows.Controls.Label">
+                            <Label IsHitTestVisible="False" Content="Label"/>
+                        </t:ControlItem>
+                    </ListBoxItem>
+                    <!--ListBoxItem>
+                        <t:ControlItem MouseLeftButtonDown="DragStart" ToolTip="System.Windows.Controls.Label">
+                            <RadioButton BorderBrush="#FFD2D2D2" Content="Select" Height="50" Width="80" GroupName="DrawGroup" Click="SelectButton_Click"/>
+                        </t:ControlItem>
+                    </-->
+                </ListBox>
+            </Border>
+            <Border Width="600" Height="300" BorderThickness="1" BorderBrush="Black">
+                <!--Canvas x:Name="CanvasDrop" Background="AliceBlue" AllowDrop="true" Drop="DropTarget">
+                </-->
+                <InkCanvas Name="CanvasDrop" Background="AliceBlue" Width="600" Height="300" AllowDrop="True" Drop="DropTarget" EditingMode="Select">
+                    <InkCanvas.DefaultDrawingAttributes>
+                        <DrawingAttributes x:Name="strokeAttr" Width="3" Height="3" Color="Black"/>
+                    </InkCanvas.DefaultDrawingAttributes>
+                </InkCanvas>
+            </Border>
+            
+        </WrapPanel>
     </Grid>
 </Window>

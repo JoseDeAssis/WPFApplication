@@ -18,6 +18,9 @@ namespace WPFApp.Themes {
         private static readonly string PART_ELLIPSE = "PART_Ellipse";
         private static readonly string PART_BODY = "PART_Body";
 
+        private static readonly Brush _primaryColor = (Brush) Application.Current.Resources["primaryColor"];
+        private static readonly Brush _secondaryColor = (Brush)Application.Current.Resources["secondaryColor"];
+
         private Ellipse _ellipse;
         private Grid _bodyGrid;
 
@@ -43,13 +46,13 @@ namespace WPFApp.Themes {
                 _bodyGrid = GetTemplateChild<Grid>(PART_BODY);
 
                 if (_ellipse != null) {
-                    _ellipse.Fill = Brushes.Crimson;
+                    _ellipse.Fill = _primaryColor;
                     _bodyGrid.MouseEnter += (sender, e) => {
-                        _ellipse.Fill = Brushes.Aqua;
+                        _ellipse.Fill = _secondaryColor;
                     };
 
                     _bodyGrid.MouseLeave += (sender, e) => {
-                        _ellipse.Fill = Brushes.Crimson;
+                        _ellipse.Fill = _primaryColor;
                     };
                 }
 

@@ -5,6 +5,10 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/WPFApp;component/Themes/FloatingActionButton.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/WPFApp;component/Themes/ControlItem.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
+
+    <Brush x:Key="primaryColor">Crimson</Brush>
+    <Brush x:Key="secondaryColor">Blue</Brush>
 
 </ResourceDictionary>

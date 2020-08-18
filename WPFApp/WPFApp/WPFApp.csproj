@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ReflectionTest.cs" />
+    <Compile Include="Themes\ControlItem.cs" />
     <Compile Include="Themes\FloatingActionButton.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -68,6 +70,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Themes\ControlItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\FloatingActionButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
